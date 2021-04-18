@@ -6,8 +6,6 @@ int main() {
 	printf("==> DEBUG MODE\n");
 #endif
 	Product p[10];
-	
-	int n = -1;
 	int count = loadList("product.txt", p);
 
 	if(count)
@@ -20,13 +18,6 @@ int main() {
 		readList(p, count);
 #endif
 
-	while(n != 0) {
-		n = menuSelect();
-
-#ifdef _DEBUG
-		if(n == 1 || n == 3 || n == 4)
-			readList(p, count);
-#endif
-	}
+	while(menuSelect(p, &count));
 	return 0;
 }
