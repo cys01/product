@@ -49,7 +49,14 @@ int loadList(char *file, Product *p) {
 }
 
 void saveList(char *file, Product *p, int num) {
+	FILE *fp = fopen(file, "w");
 
+	for(int i = 0; i < num; i++) {
+		if(*p[i].name != 0)
+			fprintf(fp, "%d %d %d %d %s\n", p[i].weight, p[i].price, p[i].star_rating, p[i].star_count, p[i].name);
+	}
+
+	printf("정보를 저장했습니다\n");
 }
 
 void searchName(Product *p, int count) {
