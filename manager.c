@@ -83,7 +83,15 @@ char target[30];
 }
 
 void searchPrice(Product *p, int count) {
+	int target;
+	printf("찾을 가격대는? ");
+	scanf("%d", &target);
 
+	for(int i = 0; i < count; i++) {
+		if(p[i].price == target) {
+			readProduct(p[i]);
+		}
+	}
 }
 
 void searchStar(Product *p, int count) {
