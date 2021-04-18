@@ -95,7 +95,15 @@ void searchPrice(Product *p, int count) {
 }
 
 void searchStar(Product *p, int count) {
+	int target;
+	printf("찾을 별점대는? ");
+	scanf("%d", &target);
 
+	for(int i = 0; i < count; i++) {
+		if(p[i].star_rating == target) {
+			readProduct(p[i]);
+		}
+	}	
 }
 
 int menuSelect() {
