@@ -60,7 +60,26 @@ void saveList(char *file, Product *p, int num) {
 }
 
 void searchName(Product *p, int count) {
+char target[30];
+	printf("찾을 이름은? ");
+	scanf(" %[^\n]", target);
 
+	for(int i = 0; i < count; i++) {
+		int isFound = 0;
+		for(int j = 0; p[i].name[j] != 0 && !isFound; j++) {
+			if(p[i].name[j] == target[0]) {
+				int same = 1;
+				for(int k = 1; target[k] != 0 && same; k++) {
+					if(p[i].name[j + k] != target[k])
+						same = 0;
+				}
+				if(same)
+					isFound = 1;
+			}
+		}
+		if(isFound)
+			readProduct(p[i]);
+	}	
 }
 
 void searchPrice(Product *p, int count) {
