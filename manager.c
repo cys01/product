@@ -142,6 +142,12 @@ int menuSelect(Product *p, int *count) {
 		case 8:
 			searchStar(p, *count);
 	}
+
+
+#ifdef _DEBUG
+		if(n == 1 || n == 3 || n == 4)
+			readList(p, *count);
+#endif
 	
 	return n;
 }

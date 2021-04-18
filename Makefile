@@ -1,7 +1,7 @@
 CC = gcc
 TARGET = product
 DTARGET = product_debug
-DEPENDENCY = main.c product.o manager.o
+DEPENDENCY = main.c product.o manager.c
 DCODE = _DEBUG
 
 $(TARGET) : $(DEPENDENCY)
