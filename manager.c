@@ -35,3 +35,27 @@ int deleteList(Product *p, int num) {
 	deleteProduct(&p[idx-1]);
 	return 1;
 }
+
+int loadList(char *file, Product *p) {
+
+}
+
+void saveList(char *file, Product *p, int num) {
+
+}
+
+void searchName(Product *p, int count) {
+
+}
+
+void searchPrice(Product *p, int count) {
+
+}
+
+void searchStar(Product *p, int count) {
+
+}
+
+int menuSelect() {
+
+}

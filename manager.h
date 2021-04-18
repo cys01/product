@@ -9,3 +9,5 @@ void saveList(char *file, Product *p, int num);         // save all of the data 
 void searchName(Product *p, int count);                 // find the certain name of products, and print its information
 void searchPrice(Product *p, int count);                // find the certain price of products, and print its information
 void searchStar(Product *p, int count);                 // find the products which have certain star_rating, and print its information
+
+int menuSelect(); 					// select menu options
