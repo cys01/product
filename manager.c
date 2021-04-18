@@ -72,5 +72,9 @@ void searchStar(Product *p, int count) {
 }
 
 int menuSelect() {
+	int n;
+	printf("\n0: 사용종료\n1: 상품추가\n2: 상품조회\n3: 상품수정\n4: 상품삭제\n5: 목록저장\n6: 이름검색\n7: 가격검색\n8: 별점검색\n\n");
+	scanf("%d", &n);
 
+	return n;
 }
