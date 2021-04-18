@@ -37,7 +37,15 @@ int deleteList(Product *p, int num) {
 }
 
 int loadList(char *file, Product *p) {
+	FILE *fp = fopen(file, "r");
+	if(fp == NULL)
+		return 0;
+	int i;
+	for(i = 0; fscanf(fp, " %d", &p[i].weight) != EOF; i++) {
+		fscanf(fp, " %d %d %d %[^\n]", &p[i].price, &p[i].star_rating, &p[i].star_count, p[i].name);
+	}
 
+	return i;
 }
 
 void saveList(char *file, Product *p, int num) {
